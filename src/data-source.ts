@@ -4,19 +4,19 @@ import { DataSource, TypeORMError } from "typeorm"
 
 export const AppDataSource = new DataSource({
     type: "mysql",
-    host: "localhost",
+    host: "127.0.0.1",
     port: 3306,
-    username: "zstavba",
-    password: "Zstavba@1584",
-    database: "konus",
+    username: "user",
+    password: "password",
+    database: "db",
     synchronize: true,
     logging: false,
-    entities: ["src/entity/*.ts" ],
+    entities: ["src/entity/*.ts"],
     migrations: [],
     subscribers: [],
     extra: {
-     keepConnectionAlive: true,
-     max: 150
+        keepConnectionAlive: true,
+        max: 150
     },
 })
 
